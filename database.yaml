@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: byteburst-db-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: byteburst-db
+  template:
+    metadata:
+      labels:
+        app: byteburst-db
+    spec:
+      containers:
+      - name: mongodb
+        image: mongo:latest
+        ports:
+        - containerPort: 27017
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: database-service
+spec:
+  selector:
+    app: byteburst-db
+  ports:
+    - protocol: TCP
+      port: 27017
+      targetPort: 27017

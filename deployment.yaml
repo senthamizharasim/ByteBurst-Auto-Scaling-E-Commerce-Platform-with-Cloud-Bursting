@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: byteburst-backend
-        image: byteburst-backend:v2
+        image: byteburst-backend:v6
         imagePullPolicy: Never
         ports:
         - containerPort: 5000

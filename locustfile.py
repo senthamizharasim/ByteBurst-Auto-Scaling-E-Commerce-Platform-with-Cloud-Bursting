@@ -5,7 +5,7 @@ class ShopperUser(HttpUser):
 
     @task(3)
     def view_products(self):
-        self.client.get("/products")
+        self.client.get("/catalog")
 
     @task(1)
     def check_health(self):

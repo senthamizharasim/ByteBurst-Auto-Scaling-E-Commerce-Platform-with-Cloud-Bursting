@@ -69,7 +69,7 @@ HTML_TEMPLATE = """
         
         <!-- Localhost ports used temporarily; NGINX Ingress will handle this in the cloud -->
         <iframe id="storefront" class="active" src="http://localhost:3000"></iframe>
-        <iframe id="telemetry" src="http://localhost:3000/d/metrics"></iframe> 
+        <iframe id="telemetry" src="http://localhost:3001"></iframe> 
         <iframe id="stress" src="http://localhost:8089"></iframe>
     </div>
 
